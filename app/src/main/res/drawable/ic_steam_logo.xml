@@ -1,0 +1,28 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="40dp"
+    android:viewportWidth="120"
+    android:viewportHeight="40">
+    
+    <!-- Steam logosu basit bir versiyonu -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M20,15 C25,15 30,20 30,25 C30,30 25,35 20,35 C15,35 10,30 10,25 C10,20 15,15 20,15 Z"/>
+    
+    <!-- STEAM yazısı -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M45,20 L50,20 L50,30 L45,30 Z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M52,20 L62,20 L62,22 L55,22 L55,24 L60,24 L60,26 L55,26 L55,28 L62,28 L62,30 L52,30 Z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M64,20 L69,20 L72,28 L75,20 L80,20 L80,30 L77,30 L77,24 L75,30 L69,30 L67,24 L67,30 L64,30 Z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M82,20 L92,20 L92,22 L87,22 L87,24 L91,24 L91,26 L87,26 L87,30 L82,30 Z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M94,20 L99,20 L99,24 L102,20 L107,20 L103,24 L107,30 L102,30 L100,26 L99,28 L99,30 L94,30 Z"/>
+</vector> 
