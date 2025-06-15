@@ -2,4 +2,34 @@
     <string name="app_name">SteamUI</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="_18_99">$18.99</string>
+    <string name="_60">-60%</string>
+    <string name="_7_59_usd">$7.59 USD</string>
+    <string name="_75">-75%</string>
+    <string name="_24_99">$24.99</string>
+    <string name="_6_24_usd">$6.24 USD</string>
+    <string name="_10_usd_alti">$10 USD ALTI</string>
+    <string name="_5_usd_alti">$5 USD ALTI</string>
+    <string name="yeni_ve_pop_ler">Yeni ve Popüler</string>
+    <string name="ok_satanlar">Çok Satanlar</string>
+    <string name="pop_ler_ve_yak_nda">Popüler ve Yakında</string>
+    <string name="the_alters">The Alters</string>
+    <string name="hayatta_kalma_s_n_a_etme">Hayatta Kalma, Üs İnşa Etme,</string>
+    <string name="_13_haz_2025">13 Haz 2025</string>
+    <string name="_10">-10%</string>
+    <string name="_17_99">$17.99</string>
+    <string name="_16_19">$16.19</string>
+    <string name="stellar_blade">Stellar Blade™</string>
+    <string name="kad_n_karakter_aksiyon_souls_like">Kadın Karakter, Aksiyon, Souls-like</string>
+    <string name="_2_haz_2025">2 Haz 2025</string>
+    <string name="_59_99">$59.99</string>
+    <string name="zel_firsatlar">ÖZEL FIRSATLAR</string>
+    <string name="crets_z_oyunlar">ÜCRETSİZ OYUNLAR</string>
+    <string name="yen_ikanlar">YENİ ÇIKANLAR</string>
+    <string name="steam_e_g_z_atin">STEAM\'E GÖZ ATIN</string>
+    <string name="c_zdan">CÜZDAN</string>
+    <string name="stek_l_stes">İSTEK LİSTESİ</string>
+    <string name="men">MENÜ</string>
+    <string name="ma_aza_da_ara">Mağaza\'da ara</string>
+    <string name="kullanici_et_ketler">KULLANICI ETİKETLERİ</string>
 </resources>

@@ -17,12 +17,7 @@
         android:padding="12dp"
         android:background="#171a21">
 
-        <!-- Steam Logo -->
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="32dp"
-            android:src="@drawable/ic_steam_logo"
-            android:layout_marginEnd="16dp"/>
+
 
         <!-- Arama Çubuğu -->
         <LinearLayout
@@ -33,38 +28,96 @@
             android:background="@drawable/search_background"
             android:gravity="center_vertical"
             android:paddingStart="12dp"
-            android:paddingEnd="12dp">
+            android:paddingEnd="12dp"
+            android:baselineAligned="false">
 
+            <!-- Steam Logo (gri ton) -->
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="44dp"
+                android:src="@drawable/steamm"
+                android:layout_marginEnd="8dp"
+                android:scaleType="fitCenter"
+                android:alpha="0.5"/> <!-- Gri görünmesi için saydamlık -->
+
+            <!-- Boşluk bırakmak için ağırlıklı View -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <!-- Search (arama) ikonu sağda -->
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:src="@drawable/ic_search"
-                android:layout_marginEnd="8dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Mağaza'da ara"
-                android:textColor="#B8C1C6"
-                android:textSize="14sp"
-                android:background="@android:color/transparent"/>
+                app:tint="#B8C1C6" />
         </LinearLayout>
 
-        <!-- Hamburger Menü -->
+
+        <!-- 3 Dots Menu -->
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/ic_menu"
+            android:src="@drawable/ic_dots_vertical"
             android:layout_marginStart="12dp"
             android:layout_marginEnd="12dp"/>
 
-        <!-- Profil Fotoğrafı -->
+        <!-- Sonic Profil Fotoğrafı -->
         <ImageView
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:src="@drawable/ic_profile"
-            android:layout_marginStart="8dp"/>
+            android:src="@drawable/sonic"
+            android:layout_marginStart="8dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/profile_circle_background"/>
 
+    </LinearLayout>
+
+    <!-- Arama Altı Menü -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:padding="16dp"
+        android:background="#1b2838">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/men"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:paddingEnd="4dp"/>
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/ic_arrow_down"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stek_l_stes"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/c_zdan"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"/>
     </LinearLayout>
 
     <!-- İçerik Alanı - ScrollView ile -->
@@ -78,79 +131,95 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- STEAM'E GÖZ ATIN Başlığı -->
+            <!-- STEAM'E GÖZ ATIN Başlığı - Küçük ve yakın -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="STEAM'E GÖZ ATIN"
+                android:text="@string/steam_e_g_z_atin"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
-                android:padding="16dp"/>
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="4dp"/>
 
-            <!-- Kategoriler -->
+            <!-- Kategoriler - 2x2 Gradient Buton -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:gravity="center"
                 android:padding="8dp">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="YENİ ÇIKANLAR"
-                    android:backgroundTint="#007ACC"
-                    android:textColor="#FFFFFF"
-                    android:textSize="12sp"
-                    android:layout_margin="4dp"
-                    style="@style/Widget.Material3.Button"/>
+                <!-- İlk Satır -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="4dp">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="ÖZEL FIRSATLAR"
-                    android:backgroundTint="#007ACC"
-                    android:textColor="#FFFFFF"
-                    android:textSize="12sp"
-                    android:layout_margin="4dp"
-                    style="@style/Widget.Material3.Button"/>
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="@string/yen_ikanlar"
+                        android:background="@drawable/button_gradient_1"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:layout_marginEnd="4dp"
+                        android:textStyle="bold"/>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="@string/zel_firsatlar"
+                        android:background="@drawable/button_gradient_1"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:layout_marginStart="4dp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <!-- İkinci Satır -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="@string/crets_z_oyunlar"
+                        android:background="@drawable/button_gradient_1"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:layout_marginEnd="4dp"
+                        android:textStyle="bold"/>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="@string/kullanici_et_ketler"
+                        android:background="@drawable/button_gradient_1"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:layout_marginStart="4dp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:paddingBottom="8dp">
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="ÜCRETSİZ OYUNLAR"
-                    android:backgroundTint="#007ACC"
-                    android:textColor="#FFFFFF"
-                    android:textSize="12sp"
-                    android:layout_margin="4dp"
-                    style="@style/Widget.Material3.Button"/>
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="KULLANICI ETİKETLERİ"
-                    android:backgroundTint="#007ACC"
-                    android:textColor="#FFFFFF"
-                    android:textSize="12sp"
-                    android:layout_margin="4dp"
-                    style="@style/Widget.Material3.Button"/>
-            </LinearLayout>
 
             <!-- $10 USD ALTI Başlığı -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="$10 USD ALTI"
+                android:text="@string/_10_usd_alti"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -158,7 +227,7 @@
                 android:paddingTop="16dp"
                 android:paddingBottom="8dp"/>
 
-            <!-- Oyunlar -->
+            <!-- Oyunlar - Dikdörtgen -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -175,40 +244,48 @@
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="120dp"
+                        android:layout_height="80dp"
                         android:src="@drawable/deathstranding"
                         android:scaleType="centerCrop"
                         android:background="@drawable/card_background"/>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="-60%"
-                        android:textColor="#4CAF50"
-                        android:textStyle="bold"
-                        android:layout_marginTop="4dp"/>
-
+                    <!-- İndirim Etiketleri Yatay -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:layout_marginTop="4dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="$18.99"
+                            android:text="@string/_60"
+                            android:textColor="#4CAF50"
+                            android:textStyle="bold"
+                            android:background="@drawable/discount_background"
+                            android:padding="4dp"
+                            android:layout_marginEnd="4dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_18_99"
                             android:textColor="#B8C1C6"
                             android:textSize="12sp"
-                            android:layout_marginEnd="4dp"
-                           />
+                            android:padding="4dp"
+                            android:layout_gravity="center_vertical"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="$7.59 USD"
-                            android:textColor="#FFFFFF"
-                            android:textStyle="bold"/>
+                            android:text="@string/_7_59_usd"
+                            android:textColor="#4CAF50"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            android:layout_marginTop="2dp"/>
                     </LinearLayout>
+
+
                 </LinearLayout>
 
                 <!-- Pharaoh Oyun Kartı -->
@@ -221,40 +298,47 @@
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="120dp"
+                        android:layout_height="80dp"
                         android:src="@drawable/pharaoh"
                         android:scaleType="centerCrop"
                         android:background="@drawable/card_background"/>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="-75%"
-                        android:textColor="#4CAF50"
-                        android:textStyle="bold"
-                        android:layout_marginTop="4dp"/>
-
+                    <!-- İndirim Etiketleri Yatay -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:layout_marginTop="4dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="$24.99"
+                            android:text="@string/_75"
+                            android:textColor="#4CAF50"
+                            android:textStyle="bold"
+                            android:background="@drawable/discount_background"
+                            android:padding="4dp"
+                            android:layout_marginEnd="4dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_24_99"
                             android:textColor="#B8C1C6"
                             android:textSize="12sp"
-                            android:layout_marginEnd="4dp"
-                           />
-
+                            android:padding="4dp"
+                            android:layout_gravity="center_vertical"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="$6.24 USD"
-                            android:textColor="#FFFFFF"
-                            android:textStyle="bold"/>
+                            android:text="@string/_6_24_usd"
+                            android:textColor="#4CAF50"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            android:layout_marginTop="2dp"/>
                     </LinearLayout>
+
+
                 </LinearLayout>
             </LinearLayout>
 
@@ -269,20 +353,19 @@
                 <Button
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="$10 USD ALTI"
-                    android:backgroundTint="#2a475e"
+                    android:text="@string/_10_usd_alti"
+                    android:background="@drawable/rectangle_button_background"
                     android:textColor="#FFFFFF"
-                    android:layout_marginEnd="8dp"
-                    style="@style/Widget.Material3.Button.OutlinedButton"/>
+                    android:layout_marginEnd="8dp" />
 
                 <Button
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="$5 USD ALTI"
-                    android:backgroundTint="#2a475e"
+                    android:text="@string/_5_usd_alti"
+                    android:background="@drawable/rectangle_button_background"
                     android:textColor="#FFFFFF"
-                    android:layout_marginStart="8dp"
-                    style="@style/Widget.Material3.Button.OutlinedButton"/>
+                    android:layout_marginStart="8dp" />
+
             </LinearLayout>
 
             <!-- Sekmeler -->
@@ -297,17 +380,17 @@
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Yeni ve Popüler" />
+                    android:text="@string/yeni_ve_pop_ler" />
 
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Çok Satanlar" />
+                    android:text="@string/ok_satanlar" />
 
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Popüler ve Yakında" />
+                    android:text="@string/pop_ler_ve_yak_nda" />
             </com.google.android.material.tabs.TabLayout>
 
             <!-- Oyun Listesi -->
@@ -343,7 +426,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="The Alters"
+                            android:text="@string/the_alters"
                             android:textColor="#FFFFFF"
                             android:textStyle="bold"
                             android:textSize="16sp"/>
@@ -351,7 +434,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Hayatta Kalma, Üs İnşa Etme,"
+                            android:text="@string/hayatta_kalma_s_n_a_etme"
                             android:textColor="#B8C1C6"
                             android:textSize="12sp"
                             android:layout_marginTop="2dp"/>
@@ -359,7 +442,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="13 Haz 2025"
+                            android:text="@string/_13_haz_2025"
                             android:textColor="#B8C1C6"
                             android:textSize="11sp"/>
                     </LinearLayout>
@@ -374,7 +457,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="-10%"
+                            android:text="@string/_10"
                             android:textColor="#4CAF50"
                             android:textStyle="bold"
                             android:background="@drawable/discount_background"
@@ -389,7 +472,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="$17.99"
+                                android:text="@string/_17_99"
                                 android:textColor="#B8C1C6"
                                 android:textSize="12sp"
                                 android:layout_marginEnd="4dp"
@@ -398,8 +481,8 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="$16.19"
-                                android:textColor="#FFFFFF"
+                                android:text="@string/_16_19"
+                                android:textColor="#4CAF50"
                                 android:textStyle="bold"/>
                         </LinearLayout>
                     </LinearLayout>
@@ -431,7 +514,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Stellar Blade™"
+                            android:text="@string/stellar_blade"
                             android:textColor="#FFFFFF"
                             android:textStyle="bold"
                             android:textSize="16sp"/>
@@ -439,7 +522,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Kadın Karakter, Aksiyon, Souls-like"
+                            android:text="@string/kad_n_karakter_aksiyon_souls_like"
                             android:textColor="#B8C1C6"
                             android:textSize="12sp"
                             android:layout_marginTop="2dp"/>
@@ -447,7 +530,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2 Haz 2025"
+                            android:text="@string/_2_haz_2025"
                             android:textColor="#B8C1C6"
                             android:textSize="11sp"/>
                     </LinearLayout>
@@ -455,7 +538,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="$59.99"
+                        android:text="@string/_59_99"
                         android:textColor="#FFFFFF"
                         android:textStyle="bold"
                         android:layout_gravity="center_vertical"/>
