@@ -20,7 +20,7 @@
         <!-- Üst Satır: Arama çubuğu, 3 nokta, profil -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="66dp"
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:padding="12dp">
@@ -276,185 +276,58 @@
 
             </LinearLayout>
 
-            <!-- Sekmeler -->
-            <com.google.android.material.tabs.TabLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:tabTextColor="#B8C1C6"
-                app:tabSelectedTextColor="#007ACC"
-                app:tabIndicatorColor="#007ACC"
-                android:background="#1b2838">
-
-                <com.google.android.material.tabs.TabItem
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/yeni_ve_pop_ler" />
-
-                <com.google.android.material.tabs.TabItem
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/ok_satanlar" />
-
-                <com.google.android.material.tabs.TabItem
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/pop_ler_ve_yak_nda" />
-            </com.google.android.material.tabs.TabLayout>
-
-            <!-- Oyun Listesi -->
+            <!-- Scrollable TabLayout Container -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="8dp">
+                android:orientation="horizontal"
+                android:background="#1b2838"
+                android:gravity="center_vertical">
 
-                <!-- The Alters Oyun Kartı -->
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <!-- Sol Ok -->
+                <ImageView
+                    android:id="@+id/ivLeftArrow"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_arrow_left"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:padding="4dp"
+                    android:visibility="gone"
+                    android:contentDescription="@string/todo"/>
+
+                <!-- TabLayout -->
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="12dp"
-                    android:background="@drawable/game_card_background"
-                    android:layout_marginBottom="8dp">
+                    android:layout_weight="1"
+                    app:tabTextColor="#B8C1C6"
+                    app:tabSelectedTextColor="#007ACC"
+                    app:tabIndicatorColor="#007ACC"
+                    app:tabMode="scrollable"
+                    android:background="#1b2838"/>
 
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:src="@drawable/alters"
-                        android:layout_marginEnd="12dp"
-                        android:contentDescription="@string/todo"
-                        android:scaleType="centerCrop"/>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:layout_gravity="center_vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/the_alters"
-                            android:textColor="#FFFFFF"
-                            android:textStyle="bold"
-                            android:textSize="16sp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/hayatta_kalma_s_n_a_etme"
-                            android:textColor="#B8C1C6"
-                            android:textSize="12sp"
-                            android:layout_marginTop="2dp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/_13_haz_2025"
-                            android:textColor="#B8C1C6"
-                            android:textSize="11sp"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_gravity="center_vertical"
-                        android:gravity="end">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/_10"
-                            android:textColor="#4CAF50"
-                            android:textStyle="bold"
-                            android:background="@drawable/discount_background"
-                            android:padding="4dp"/>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:layout_marginTop="4dp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/_17_99"
-                                android:textColor="#B8C1C6"
-                                android:textSize="12sp"
-                                android:layout_marginEnd="4dp"
-                                />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/_16_19"
-                                android:textColor="#4CAF50"
-                                android:textStyle="bold"/>
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-
-                <!-- Stellar Blade Oyun Kartı -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="12dp"
-                    android:background="@drawable/game_card_background"
-                    android:layout_marginBottom="8dp">
-
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:src="@drawable/stellarblade"
-                        android:contentDescription="@string/todo"
-                        android:layout_marginEnd="12dp"
-                        android:scaleType="centerCrop"/>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:layout_gravity="center_vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/stellar_blade"
-                            android:textColor="#FFFFFF"
-                            android:textStyle="bold"
-                            android:textSize="16sp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/kad_n_karakter_aksiyon_souls_like"
-                            android:textColor="#B8C1C6"
-                            android:textSize="12sp"
-                            android:layout_marginTop="2dp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/_2_haz_2025"
-                            android:textColor="#B8C1C6"
-                            android:textSize="11sp"/>
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/_59_99"
-                        android:textColor="#FFFFFF"
-                        android:textStyle="bold"
-                        android:layout_gravity="center_vertical"/>
-                </LinearLayout>
+                <!-- Sağ Ok -->
+                <ImageView
+                    android:id="@+id/ivRightArrow"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_arrow_right"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:padding="4dp"
+                    android:visibility="visible"
+                    android:contentDescription="@string/todo"/>
 
             </LinearLayout>
+
+            <!-- ViewPager2 -->
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+
 
         </LinearLayout>
 
