@@ -1,0 +1,247 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1b2838"
+    tools:context=".HomeFragment">
+
+    <!-- Üst Menü -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MENÜ"
+            android:textColor="#FFFFFF"
+            android:paddingEnd="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="İSTEK LİSTESİ"
+            android:textColor="#FFFFFF"
+            android:paddingEnd="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CÜZDAN"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+
+    <!-- Kategoriler -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="YENİ ÇIKANLAR"
+            android:backgroundTint="#007ACC"
+            android:textColor="#FFFFFF"
+            android:layout_margin="4dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ÖZEL FIRSATLAR"
+            android:backgroundTint="#007ACC"
+            android:textColor="#FFFFFF"
+            android:layout_margin="4dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ÜCRETSİZ OYUNLAR"
+            android:backgroundTint="#007ACC"
+            android:textColor="#FFFFFF"
+            android:layout_margin="4dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KULLANICI ETİKETLERİ"
+            android:backgroundTint="#007ACC"
+            android:textColor="#FFFFFF"
+            android:layout_margin="4dp"/>
+    </LinearLayout>
+
+    <!-- Oyunlar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <!-- Oyun Kartı -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/deathstranding"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-60% $7.59 USD"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <!-- Diğer oyun kartı -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/pharaoh"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-75% $6.24 USD"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Sekmeler -->
+    <TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabTextColor="#FFFFFF"
+        app:tabSelectedTextColor="#007ACC">
+
+        <TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yeni ve Popüler" />
+
+        <TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Çok Satanlar" />
+
+        <TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Popüler ve Yakında" />
+    </TabLayout>
+
+    <!-- Oyun Listesi -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- Oyun Kartı -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:background="#2a475e"
+            android:layout_marginBottom="4dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/alters"
+                android:layout_marginEnd="8dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="The Alters"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hayatta Kalma, Üs İnşa Etme"
+                    android:textColor="#B0BEC5"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-10% $16.19"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <!-- Diğer Oyun Kartı -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:background="#2a475e"
+            android:layout_marginBottom="4dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/stellarblade"
+                android:layout_marginEnd="8dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stellar Blade™"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kadın Karakter, Aksiyon"
+                    android:textColor="#B0BEC5"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$59.99"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
