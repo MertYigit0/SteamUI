@@ -302,12 +302,18 @@
                 <com.google.android.material.tabs.TabLayout
                     android:id="@+id/tabLayout"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_weight="1"
+                    app:tabTextAppearance="@style/TabTextAppearance"
                     app:tabTextColor="#6495b4"
                     app:tabSelectedTextColor="#ffffff"
                     app:tabBackground="@drawable/tab_background_selector"
                     app:tabMode="scrollable"
+                    app:tabMinWidth="60dp"
+                    app:tabPaddingStart="8dp"
+                    app:tabPaddingEnd="8dp"
+                    app:tabPaddingTop="4dp"
+                    app:tabPaddingBottom="4dp"
                     android:background="#1b2838"/>
 
                 <!-- Sağ Ok -->
