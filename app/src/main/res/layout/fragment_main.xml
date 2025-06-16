@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="#171a21">
+        android:background="#202126">
 
 
 
@@ -155,7 +155,7 @@
                 android:textStyle="bold"
                 android:paddingStart="16dp"
                 android:paddingTop="8dp"
-                android:paddingBottom="4dp"/>
+               />
 
             <!-- Kategoriler - 2x2 Gradient Buton -->
             <LinearLayout
@@ -235,11 +235,11 @@
                 android:layout_height="wrap_content"
                 android:text="@string/_10_usd_alti"
                 android:textColor="#FFFFFF"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 android:paddingStart="16dp"
                 android:paddingTop="16dp"
-                android:paddingBottom="8dp"/>
+                />
 
             <!-- Oyunlar - Yatay RecyclerView -->
             <androidx.recyclerview.widget.RecyclerView
@@ -301,8 +301,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:tabTextColor="#B8C1C6"
-                    app:tabSelectedTextColor="#007ACC"
+                    app:tabTextColor="#6495b4"
+                    app:tabSelectedTextColor="#ffffff"
                     app:tabIndicatorColor="#007ACC"
                     app:tabMode="scrollable"
                     android:background="#1b2838"/>

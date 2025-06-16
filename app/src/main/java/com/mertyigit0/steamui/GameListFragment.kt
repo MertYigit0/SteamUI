@@ -66,9 +66,11 @@ class GameListFragment : Fragment() {
                 GameListItem(R.drawable.stellarblade, "Stellar Blade™", "Aksiyon, Souls-like", "2 Haz 2025", "", "$59.99", "$59.99"),
                 GameListItem(R.drawable.pharaoh, "Pharaoh", "Strateji, Şehir Kurma", "25 Oca 2025", "-75%", "$24.99", "$6.24"),
                 GameListItem(R.drawable.deathstranding, "Death Stranding 2", "Aksiyon, Macera", "30 Oca 2025", "-20%", "$69.99", "$55.99"),
-                GameListItem(R.drawable.cyberpunk2077, "Cyberpunk Expansion", "RPG, DLC", "5 Şub 2025", "-25%", "$29.99", "$22.49")
+                GameListItem(R.drawable.cyberpunk2077, "Cyberpunk Expansion", "RPG, DLC", "5 Şub 2025", "-25%", "$29.99", "$22.49"),
+
             )
             "Çok Satanlar" -> listOf(
+
                 GameListItem(R.drawable.cyberpunk2077, "Cyberpunk 2077", "RPG, Aksiyon", "15 Oca 2025", "-30%", "$59.99", "$41.99"),
                 GameListItem(R.drawable.gow, "God of War", "Aksiyon, Macera", "20 Oca 2025", "-40%", "$49.99", "$29.99"),
                 GameListItem(R.drawable.witcher, "The Witcher 3", "RPG, Açık Dünya", "18 Oca 2025", "-70%", "$39.99", "$11.99"),
@@ -93,6 +95,7 @@ class GameListFragment : Fragment() {
                 GameListItem(R.drawable.cyberpunk2077, "Night City Stories", "RPG, Spin-off", "30 Nis 2025", "", "$39.99", "$39.99")
             )
             "Özel Fırsatlar" -> listOf(
+                GameListItem(R.drawable.tlou2, "The Last of Us Part II", "Aksiyon, Macera", "30 Nis 2025", "-90%", "$49.99", "$4.99"),
                 GameListItem(R.drawable.witcher, "The Witcher 3", "RPG, Açık Dünya", "18 Oca 2025", "-70%", "$39.99", "$11.99"),
                 GameListItem(R.drawable.pharaoh, "Pharaoh", "Strateji, Şehir Kurma", "25 Oca 2025", "-75%", "$24.99", "$6.24"),
                 GameListItem(R.drawable.deathstranding, "Death Stranding", "Aksiyon, Macera", "10 Oca 2025", "-60%", "$18.99", "$7.59"),
