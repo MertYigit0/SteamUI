@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -153,8 +154,9 @@
                 android:textColor="#FFFFFF"
                 android:textSize="16sp"
                 android:textStyle="bold"
+                android:layout_marginTop="10dp"
                 android:paddingStart="16dp"
-                android:paddingTop="8dp"
+                android:paddingTop="0dp"
                />
 
             <!-- Kategoriler - 2x2 Gradient Buton -->
@@ -253,7 +255,7 @@
             <!-- Butonlar -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="64dp"
                 android:orientation="horizontal"
                 android:gravity="center"
                 android:padding="16dp">
@@ -261,10 +263,11 @@
                 <Button
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/_10_usd_alti"
+                    android:layout_marginEnd="8dp"
                     android:background="@drawable/rectangle_button_background"
-                    android:textColor="#FFFFFF"
-                    android:layout_marginEnd="8dp" />
+                    android:fontFamily="@font/barlow"
+                    android:text="@string/_10_usd_alti"
+                    android:textColor="#FFFFFF" />
 
                 <Button
                     android:layout_width="150dp"
@@ -303,7 +306,7 @@
                     android:layout_weight="1"
                     app:tabTextColor="#6495b4"
                     app:tabSelectedTextColor="#ffffff"
-                    app:tabIndicatorColor="#007ACC"
+                    app:tabBackground="@drawable/tab_background_selector"
                     app:tabMode="scrollable"
                     android:background="#1b2838"/>
 
