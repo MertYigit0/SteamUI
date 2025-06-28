@@ -214,6 +214,7 @@
                         android:textColor="#FFFFFF"
                         android:textSize="13sp"
                         android:layout_marginEnd="4dp"
+                        android:paddingBottom="16dp"
                         android:textStyle="bold"/>
 
                     <Button
@@ -225,6 +226,7 @@
                         android:textColor="#FFFFFF"
                         android:textSize="13sp"
                         android:layout_marginStart="4dp"
+                        android:paddingBottom="16dp"
                         android:textStyle="bold"/>
                 </LinearLayout>
 
@@ -236,6 +238,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_10_usd_alti"
+                android:fontFamily="@font/barlow"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -261,7 +264,7 @@
                 android:padding="16dp">
 
                 <Button
-                    android:layout_width="150dp"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:background="@drawable/rectangle_button_background"
@@ -270,9 +273,10 @@
                     android:textColor="#FFFFFF" />
 
                 <Button
-                    android:layout_width="150dp"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:text="@string/_5_usd_alti"
+                    android:fontFamily="@font/barlow"
                     android:background="@drawable/rectangle_button_background"
                     android:textColor="#FFFFFF"
                     android:layout_marginStart="8dp" />
