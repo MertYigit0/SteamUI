@@ -57,14 +57,6 @@
         android:layout_gravity="bottom"
         android:gravity="end">
 
-        <TextView
-            android:id="@+id/tvReleaseDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Release Date"
-            android:textColor="#B8C1C6"
-            android:textSize="11sp"
-            android:layout_marginBottom="8dp"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -109,6 +101,16 @@
 
             </LinearLayout>
         </LinearLayout>
+        <TextView
+            android:id="@+id/tvReleaseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Release Date"
+            android:textColor="#B8C1C6"
+            android:textSize="11sp"
+            android:layout_marginTop="8dp"
+           />
+
     </LinearLayout>
 
 </LinearLayout>
